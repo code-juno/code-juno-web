@@ -21,9 +21,10 @@ export default function Navbar() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className="fixed top-0 w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm z-50 border-b border-gray-200 dark:border-gray-800"
+      className="fixed top-0 w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm z-100 border-b border-gray-200 dark:border-gray-800"
+      style={{ zIndex: 100 }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-50">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="font-mono text-xl relative group">
             <span className="text-blue-600 dark:text-blue-400">code</span>

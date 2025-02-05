@@ -5,9 +5,9 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Brian (Jun) - React & React Native Developer | CodeJuno",
+  title: "codejuno",
   description:
-    "Portfolio website of Brian (Jun), a passionate React and React Native developer. Explore my projects and skills at CodeJuno.",
+    "Portfolio website of Brian (Jun), a full stack developer. Explore my projects and skills at codejuno.",
 };
 
 export default function RootLayout({
