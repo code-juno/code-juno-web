@@ -10,7 +10,7 @@ export const PERSONAL_INFO = {
   ALIAS: "Jun",
   HANDLE: "codejuno",
   ROLE: "Full Stack Developer",
-  BIO: "I craft beautiful and performant mobile and web applications. With a passion for clean code and user-centric design, I transform ideas into digital experiences.",
+  BIO: "I craft beautiful and performant mobile and web applications. With a passion for clean code and user-centric design, I transform ideas into exceptional digital experiences.",
 };
 
 export const SECTION_IDS = {
