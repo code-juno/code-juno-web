@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
+import Image from "next/image";
 
 type Project = {
   title: string;
@@ -15,10 +16,10 @@ type Project = {
 const projects: Project[] = [
   // Add your projects here
   {
-    title: "Project Example",
+    title: "Language Learning Mobile App",
     description:
-      "A brief description of your project and what problems it solves.",
-    technologies: ["React", "TypeScript", "Tailwind"],
+      "Cross platform, iOS and Android language learning app utilising memory retention techniques such as spaced repetition and flashcards.",
+    technologies: ["Expo", "React Native", "AI"],
     githubUrl: "https://github.com/codejuno/project",
     liveUrl: "https://project.codejuno.dev",
   },
@@ -35,10 +36,12 @@ function ProjectCard({ project }: { project: Project }) {
     >
       {project.imageUrl && (
         <div className="relative h-48 w-full">
-          <img
+          <Image
             src={project.imageUrl}
             alt={project.title}
-            className="object-cover w-full h-full"
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </div>
       )}

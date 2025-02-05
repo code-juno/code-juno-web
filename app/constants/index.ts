@@ -22,17 +22,22 @@ export const SECTION_IDS = {
 export const SKILLS = {
   FIRST_ROW: [
     { name: "React", icon: "FaReact", color: "text-[#61DAFB]" },
+    {
+      name: "React Native",
+      icon: "FaReact",
+      color: "text-gray-100 dark:text-white",
+    },
     { name: "TypeScript", icon: "SiTypescript", color: "text-[#3178C6]" },
-    { name: "JavaScript", icon: "SiJavascript", color: "text-[#F7DF1E]" },
     {
       name: "Next.js",
       icon: "SiNextdotjs",
       color: "text-gray-800 dark:text-white",
     },
     { name: "Node.js", icon: "FaNodeJs", color: "text-[#339933]" },
-    { name: "Redux", icon: "SiRedux", color: "text-[#764ABC]" },
+    { name: "Expo", icon: "SiExpo", color: "text-gray-900 dark:text-white" },
     { name: "Tailwind CSS", icon: "SiTailwindcss", color: "text-[#06B6D4]" },
     { name: "GraphQL", icon: "SiGraphql", color: "text-[#E10098]" },
+    { name: "Drizzle", icon: "SiD3Dotjs", color: "text-[#3178C6]" },
   ],
   SECOND_ROW: [
     { name: "Prisma", icon: "SiPrisma", color: "text-[#2D3748]" },
@@ -42,5 +47,7 @@ export const SKILLS = {
     { name: "Git", icon: "FaGitAlt", color: "text-[#F05032]" },
     { name: "Docker", icon: "FaDocker", color: "text-[#2496ED]" },
     { name: "AWS", icon: "FaAws", color: "text-[#FF9900]" },
+    { name: "Azure", icon: "VscAzure", color: "text-[#0078D4]" },
+    { name: "Cloudflare", icon: "SiCloudflare", color: "text-[#F38020]" },
   ],
 };

@@ -3,6 +3,7 @@
 import { IconType } from "react-icons";
 import * as Fa from "react-icons/fa";
 import * as Si from "react-icons/si";
+import * as Vsc from "react-icons/vsc";
 import type { Skill } from "@/app/types";
 
 type SkillCardProps = {
@@ -14,7 +15,11 @@ export default function SkillCard({ skill, className = "" }: SkillCardProps) {
   // Get the icon component from the appropriate icon set
   const IconComponent = skill.icon.startsWith("Fa")
     ? (Fa as Record<string, IconType>)[skill.icon]
+    : skill.icon.startsWith("Vsc")
+    ? (Vsc as Record<string, IconType>)[skill.icon]
     : (Si as Record<string, IconType>)[skill.icon];
+
+  console.log(IconComponent, skill.icon);
 
   return (
     <div
