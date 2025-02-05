@@ -52,6 +52,14 @@
   animation: pulseGradient 8s ease-in-out infinite;
 }
 
+.heroText {
+  @apply relative z-10;
+}
+
+.socialLinks {
+  @apply relative z-10 flex justify-center gap-4;
+}
+
 .gradientText {
   @apply bg-clip-text text-transparent bg-gradient-to-r relative z-10;
   background-image: linear-gradient(

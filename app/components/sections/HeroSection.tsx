@@ -29,7 +29,7 @@ export default function HeroSection() {
       <div className={styles.sectionBackground} />
       <div className={styles.sectionOverlay} />
 
-      <div className="px-4 sm:px-6 lg:px-8">
+      <div className="px-4 sm:px-6 lg:px-8 z-50">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -38,21 +38,29 @@ export default function HeroSection() {
             className={`text-center ${styles.textContainer}`}
           >
             <div className={styles.textBackground} />
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">
+            <h1
+              className={`${styles.heroText} text-4xl sm:text-5xl md:text-6xl font-bold mb-6`}
+            >
               Hi, I&apos;m{" "}
               <span className={styles.gradientText}>{PERSONAL_INFO.NAME}</span>{" "}
               <span className={styles.wavingHand}>👋</span>
             </h1>
-            <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-400 mb-4">
-              <span className={styles.gradientText}>{PERSONAL_INFO.ROLE}</span>
-            </p>
-            <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">
+            <p
+              className={`${styles.heroText} text-lg text-gray-600 dark:text-gray-400 mb-4`}
+            >
               Also known as {PERSONAL_INFO.ALIAS} |{" "}
               <span className={styles.gradientText}>
                 {PERSONAL_INFO.HANDLE}
               </span>
             </p>
-            <p className="max-w-2xl mx-auto text-gray-600 dark:text-gray-400 mb-8">
+            <p
+              className={`${styles.heroText} text-xl sm:text-2xl text-gray-600 dark:text-gray-400 mb-8`}
+            >
+              <span className={styles.gradientText}>{PERSONAL_INFO.ROLE}</span>
+            </p>
+            <p
+              className={`${styles.heroText} max-w-2xl mx-auto text-gray-600 dark:text-gray-400 mb-8`}
+            >
               {PERSONAL_INFO.BIO}
             </p>
 
@@ -73,7 +81,7 @@ export default function HeroSection() {
             </motion.div>
 
             {/* Social Links */}
-            <SocialLinks />
+            <SocialLinks className={styles.socialLinks} />
           </motion.div>
         </div>
       </div>
@@ -88,7 +96,7 @@ export default function HeroSection() {
           transition={{ duration: 0.3 }}
         >
           <a
-            href={`#${SECTION_IDS.SKILLS}`}
+            href={`#${SECTION_IDS.PROJECTS}`}
             className={`${styles.scrollIndicator} text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white flex flex-col items-center gap-2`}
           >
             <BsMouse size={28} />

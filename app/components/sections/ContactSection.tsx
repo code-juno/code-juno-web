@@ -19,7 +19,7 @@ export default function ContactSection() {
             viewport={{ once: true }}
             className="max-w-3xl mx-auto"
           >
-            <h2 className="text-4xl font-bold mb-8 text-center bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-blue-500 to-cyan-500">
+            <h2 className="text-3xl font-bold mb-12 text-center">
               Get in Touch
             </h2>
 

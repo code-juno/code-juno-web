@@ -1,20 +1,21 @@
 export const SOCIAL_LINKS = {
-  GITHUB: "https://github.com/codejuno",
-  LINKEDIN: "https://linkedin.com/in/codejuno",
-  INSTAGRAM: "https://instagram.com/codejuno",
-  EMAIL: "brian@codejuno.dev",
+  GITHUB: "https://github.com/code-juno",
+  LINKEDIN: "https://linkedin.com/in/brian-alldred-3a5662194",
+  INSTAGRAM: "https://www.instagram.com/junalldred/",
+  EMAIL: "bri_alldred@live.co.uk",
 };
 
 export const PERSONAL_INFO = {
   NAME: "Brian",
   ALIAS: "Jun",
-  HANDLE: "CodeJuno",
-  ROLE: "React & React Native Developer",
+  HANDLE: "codejuno",
+  ROLE: "Full Stack Developer",
   BIO: "I craft beautiful and performant mobile and web applications using React and React Native. With a passion for clean code and user-centric design, I transform ideas into exceptional digital experiences.",
 };
 
 export const SECTION_IDS = {
   SKILLS: "skills",
+  PROJECTS: "projects",
   CONTACT: "contact",
 };
 
