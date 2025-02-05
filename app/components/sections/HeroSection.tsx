@@ -39,14 +39,14 @@ export default function HeroSection() {
           >
             <div className={styles.textBackground} />
             <h1
-              className={`${styles.heroText} text-4xl sm:text-5xl md:text-6xl font-bold mb-6`}
+              className={`${styles.heroText} text-4xl sm:text-5xl md:text-6xl font-bold mb-2`}
             >
               Hi, I&apos;m{" "}
               <span className={styles.gradientText}>{PERSONAL_INFO.NAME}</span>{" "}
               <span className={styles.wavingHand}>👋</span>
             </h1>
             <p
-              className={`${styles.heroText} text-lg text-gray-600 dark:text-gray-400 mb-4`}
+              className={`${styles.heroText} text-lg text-gray-600 dark:text-gray-400 mb-8`}
             >
               a.k.a. {PERSONAL_INFO.ALIAS} |{" "}
               <span className={styles.gradientText}>
@@ -59,7 +59,7 @@ export default function HeroSection() {
               <span className={styles.gradientText}>{PERSONAL_INFO.ROLE}</span>
             </p>
             <p
-              className={`${styles.heroText} max-w-2xl mx-auto text-gray-600 dark:text-gray-400 mb-8`}
+              className={`${styles.heroText} max-w-lg mx-auto text-gray-600 dark:text-gray-400 mb-8`}
             >
               {PERSONAL_INFO.BIO}
             </p>
