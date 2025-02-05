@@ -30,9 +30,9 @@ function ProjectCard({ project }: { project: Project }) {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      viewport={{ once: true }}
-      className="bg-white dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden"
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      viewport={{ once: true, margin: "-50px" }}
+      className="group relative bg-white dark:bg-gray-900 rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-[1.02] hover:shadow-xl"
     >
       {project.imageUrl && (
         <div className="relative h-48 w-full">
@@ -50,36 +50,40 @@ function ProjectCard({ project }: { project: Project }) {
         <p className="text-gray-600 dark:text-gray-400 mb-4">
           {project.description}
         </p>
-        <div className="flex flex-wrap gap-2 mb-4">
+        <div className="flex flex-wrap gap-2 mb-6">
           {project.technologies.map((tech) => (
             <span
               key={tech}
-              className="px-3 py-1 text-sm bg-gray-100 dark:bg-gray-800 rounded-full"
+              className="px-4 py-1.5 text-sm bg-gray-100 dark:bg-gray-800 rounded-full font-medium transition-colors duration-200 hover:bg-gray-200 dark:hover:bg-gray-700"
             >
               {tech}
             </span>
           ))}
         </div>
-        <div className="flex gap-4">
+        <div className="flex gap-6">
           {project.githubUrl && (
-            <a
+            <motion.a
               href={project.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
+              className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors duration-200"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
             >
-              <FiGithub size={20} />
-            </a>
+              <FiGithub size={22} />
+            </motion.a>
           )}
           {project.liveUrl && (
-            <a
+            <motion.a
               href={project.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
+              className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors duration-200"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
             >
-              <FiExternalLink size={20} />
-            </a>
+              <FiExternalLink size={22} />
+            </motion.a>
           )}
         </div>
       </div>
@@ -97,18 +101,23 @@ export default function ProjectsSection() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true }}
+          className="text-center mb-16"
         >
           <h2 className="text-3xl font-bold mb-8 text-center">
             Featured Projects
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
-              <ProjectCard key={index} project={project} />
-            ))}
-          </div>
+          <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-lg">
+            Here are some of my recent and ongoing projects that I&apos;m
+            excited about.
+          </p>
         </motion.div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project, index) => (
+            <ProjectCard key={index} project={project} />
+          ))}
+        </div>
       </div>
     </section>
   );

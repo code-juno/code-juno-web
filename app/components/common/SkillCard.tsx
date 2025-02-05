@@ -19,8 +19,6 @@ export default function SkillCard({ skill, className = "" }: SkillCardProps) {
     ? (Vsc as Record<string, IconType>)[skill.icon]
     : (Si as Record<string, IconType>)[skill.icon];
 
-  console.log(IconComponent, skill.icon);
-
   return (
     <div
       className={`flex flex-col items-center p-4 bg-white dark:bg-gray-900 rounded-lg shadow-lg w-[120px] ${className}`}
