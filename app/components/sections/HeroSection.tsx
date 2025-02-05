@@ -48,7 +48,7 @@ export default function HeroSection() {
             <p
               className={`${styles.heroText} text-lg text-gray-600 dark:text-gray-400 mb-4`}
             >
-              Also known as {PERSONAL_INFO.ALIAS} |{" "}
+              a.k.a. {PERSONAL_INFO.ALIAS} |{" "}
               <span className={styles.gradientText}>
                 {PERSONAL_INFO.HANDLE}
               </span>
