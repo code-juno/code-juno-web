@@ -27,7 +27,7 @@ const socialLinks: SocialLink[] = [
     label: "Instagram",
   },
   {
-    href: SOCIAL_LINKS.EMAIL,
+    href: `mailto:${SOCIAL_LINKS.EMAIL}`,
     icon: FiMail,
     label: "Email",
   },
