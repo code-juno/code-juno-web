@@ -35,9 +35,12 @@ export default function SkillsSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl font-bold mb-12 text-center">
+          <h2 className="text-3xl font-bold mb-4 text-center">
             Skills & Technologies
           </h2>
+          <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-lg mb-12 text-center">
+            A collection of tools I&apos;ve used to build products.
+          </p>
 
           <div className="space-y-8">
             <InfiniteMarquee items={SKILLS.FIRST_ROW} direction="left" />

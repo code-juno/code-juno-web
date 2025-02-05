@@ -19,9 +19,12 @@ export default function ContactSection() {
             viewport={{ once: true }}
             className="max-w-3xl mx-auto"
           >
-            <h2 className="text-3xl font-bold mb-12 text-center">
+            <h2 className="text-3xl font-bold mb-4 text-center">
               Get in Touch
             </h2>
+            <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-lg mb-12 text-center">
+              Have a project in mind? I&apos;d love to hear from you.
+            </p>
 
             <div className={styles.formContainer}>
               <ContactForm />

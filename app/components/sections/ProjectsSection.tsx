@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
 import Image from "next/image";
+import { useState } from "react";
 
 type Project = {
   title: string;
@@ -20,12 +21,18 @@ const projects: Project[] = [
     description:
       "Cross platform, iOS and Android language learning app utilising memory retention techniques such as spaced repetition and flashcards.",
     technologies: ["Expo", "React Native", "AI"],
-    githubUrl: "https://github.com/codejuno/project",
-    liveUrl: "https://project.codejuno.dev",
   },
 ];
 
 function ProjectCard({ project }: { project: Project }) {
+  const [isHighlighted, setIsHighlighted] = useState(false);
+
+  const handleLinkClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setIsHighlighted(true);
+    setTimeout(() => setIsHighlighted(false), 1500);
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -60,31 +67,40 @@ function ProjectCard({ project }: { project: Project }) {
             </span>
           ))}
         </div>
-        <div className="flex gap-6">
-          {project.githubUrl && (
-            <motion.a
-              href={project.githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors duration-200"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <FiGithub size={22} />
-            </motion.a>
-          )}
-          {project.liveUrl && (
-            <motion.a
-              href={project.liveUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors duration-200"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <FiExternalLink size={22} />
-            </motion.a>
-          )}
+        <div className="flex items-center gap-6">
+          <motion.a
+            href="#"
+            onClick={handleLinkClick}
+            className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors duration-200"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <FiGithub size={22} />
+          </motion.a>
+          <motion.a
+            href="#"
+            onClick={handleLinkClick}
+            className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors duration-200"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <FiExternalLink size={22} />
+          </motion.a>
+          <motion.span
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{
+              opacity: isHighlighted ? 1 : 0,
+              scale: isHighlighted ? 1 : 0.9,
+            }}
+            transition={{ duration: 0.2 }}
+            className={`text-sm px-3 py-1 rounded-full ${
+              isHighlighted
+                ? "bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-300 border border-blue-200 dark:border-blue-800"
+                : "pointer-events-none"
+            }`}
+          >
+            Coming Soon
+          </motion.span>
         </div>
       </div>
     </motion.div>
