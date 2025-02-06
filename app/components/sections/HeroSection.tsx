@@ -64,11 +64,37 @@ export default function HeroSection() {
                   {PERSONAL_INFO.ROLE}
                 </span>
               </p>
-              <p
-                className={`${styles.heroText} max-w-lg mx-auto md:mx-0 text-gray-600 dark:text-gray-400 mb-8`}
+              <ul
+                className={`${styles.heroText} space-y-3 max-w-lg mx-auto md:mx-0 text-gray-600 dark:text-gray-400 mb-8 list-none`}
               >
-                {PERSONAL_INFO.BIO}
-              </p>
+                <motion.li
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                  className="flex items-center gap-2"
+                >
+                  <span className="text-blue-500">▹</span>I craft beautiful and
+                  performant mobile and web applications.
+                </motion.li>
+                <motion.li
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                  className="flex items-center gap-2"
+                >
+                  <span className="text-blue-500">▹</span>
+                  Consult on the latest technologies and AI trends.
+                </motion.li>
+                <motion.li
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: 0.4 }}
+                  className="flex items-center gap-2"
+                >
+                  <span className="text-blue-500">▹</span>
+                  Build tools to help businesses grow.
+                </motion.li>
+              </ul>
 
               {/* Call to Action Button */}
               <motion.div
