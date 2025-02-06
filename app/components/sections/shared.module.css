@@ -314,3 +314,25 @@
 .contactSocialLink:active {
   transform: translateY(0);
 }
+
+.blinkingCursor {
+  display: inline-block;
+  width: 0.6em;
+  height: 2px;
+  background-color: currentColor;
+  margin-left: 2px;
+  animation: blink 1s step-end infinite;
+  vertical-align: middle;
+  transform: translateY(-0.2em);
+  margin-top: 1em;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}

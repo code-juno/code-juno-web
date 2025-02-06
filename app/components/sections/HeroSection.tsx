@@ -65,7 +65,7 @@ export default function HeroSection() {
                 </span>
               </p>
               <ul
-                className={`${styles.heroText} space-y-3 max-w-lg mx-auto md:mx-0 text-gray-600 dark:text-gray-400 mb-8 list-none`}
+                className={`${styles.heroText} space-y-3 max-w-lg text-gray-600 dark:text-gray-400 mb-8 list-none text-left`}
               >
                 <motion.li
                   initial={{ opacity: 0, x: -20 }}

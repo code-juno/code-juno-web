@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { FiMenu, FiX } from "react-icons/fi";
 import { SECTION_IDS } from "@/app/constants";
+import styles from "@/app/components/sections/shared.module.css";
 
 const navItems = [
   { name: "Home", href: "/" },
@@ -46,9 +47,8 @@ export default function Navbar() {
             <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
               juno
             </span>
-            <motion.div
-              className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-cyan-500 group-hover:w-full transition-all duration-300"
-              whileHover={{ width: "100%" }}
+            <span
+              className={`${styles.blinkingCursor} text-gray-800 dark:text-white`}
             />
           </Link>
 
