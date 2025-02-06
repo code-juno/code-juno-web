@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { FiArrowRight } from "react-icons/fi";
 import { BsMouse } from "react-icons/bs";
 import Image from "next/image";
-import styles from "./shared.module.css";
+import styles from "./HeroSection.module.css";
 import SocialLinks from "../common/SocialLinks";
 import { PERSONAL_INFO, SECTION_IDS } from "@/app/constants";
 
@@ -83,7 +83,7 @@ export default function HeroSection() {
                   className="flex items-center gap-2"
                 >
                   <span className="text-blue-500">▹</span>
-                  Consult on the latest technologies and AI trends.
+                  Consult on the latest technologies, SEO and AI trends.
                 </motion.li>
                 <motion.li
                   initial={{ opacity: 0, x: -20 }}
@@ -92,7 +92,7 @@ export default function HeroSection() {
                   className="flex items-center gap-2"
                 >
                   <span className="text-blue-500">▹</span>
-                  Build tools to help businesses grow.
+                  Build tools tailored to help businesses grow.
                 </motion.li>
               </ul>
 

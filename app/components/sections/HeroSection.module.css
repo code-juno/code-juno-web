@@ -1,0 +1,131 @@
+.heroSection {
+  @apply relative min-h-screen flex flex-col justify-start md:justify-center items-center overflow-hidden;
+}
+
+.textContainer {
+  @apply relative z-10;
+}
+
+.textBackground {
+  @apply absolute inset-0 z-0 opacity-70 blur-3xl;
+  background: radial-gradient(
+    circle at center,
+    rgba(79, 70, 229, 0.15) 0%,
+    rgba(59, 130, 246, 0.15) 25%,
+    rgba(14, 165, 233, 0.15) 50%,
+    rgba(6, 182, 212, 0.15) 75%
+  );
+  animation: pulseGradient 8s ease-in-out infinite;
+}
+
+.heroText {
+  @apply relative z-10;
+}
+
+.wavingHand {
+  display: inline-block;
+  animation: wave 2.5s infinite;
+  transform-origin: 70% 70%;
+}
+
+.scrollIndicator {
+  @apply relative;
+  animation: fadeInUp 0.5s ease-out 1s forwards;
+  opacity: 0;
+}
+
+.scrollDot {
+  @apply absolute w-1 h-1 bg-current rounded-full;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: scrollDot 1.5s ease-in-out infinite;
+}
+
+.blinkingCursor {
+  display: inline-block;
+  width: 0.6em;
+  height: 2px;
+  background-color: currentColor;
+  margin-left: 2px;
+  animation: blink 1s step-end infinite;
+  vertical-align: middle;
+  transform: translateY(-0.2em);
+  margin-top: 1em;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 0.7;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scrollDot {
+  0% {
+    top: 25%;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    top: 75%;
+    opacity: 0;
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes pulseGradient {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+}

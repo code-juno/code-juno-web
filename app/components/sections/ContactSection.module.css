@@ -1,0 +1,80 @@
+.contactSection {
+  @apply relative overflow-hidden;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(79, 70, 229, 0.05) 10%,
+    rgba(79, 70, 229, 0.05) 50%,
+    rgba(79, 70, 229, 0.05) 90%,
+    transparent
+  );
+}
+
+.contactBackground {
+  @apply absolute inset-0 z-0 opacity-30;
+}
+
+.formContainer {
+  @apply relative z-10 w-full max-w-lg mx-auto;
+}
+
+.inputField {
+  @apply w-full px-4 py-3 rounded-lg bg-white/5 border border-gray-200 dark:border-gray-700 backdrop-blur-sm transition-all duration-300;
+}
+
+.inputField:hover {
+  @apply border-blue-500 dark:border-blue-400;
+}
+
+.inputField:focus {
+  @apply outline-none ring-2 ring-blue-500 dark:ring-blue-400 border-transparent;
+}
+
+.submitButton {
+  @apply w-full px-6 py-3 rounded-lg font-medium text-lg relative;
+  background: linear-gradient(
+    45deg,
+    rgba(79, 70, 229, 0.9) 0%,
+    rgba(59, 130, 246, 0.9) 50%,
+    rgba(14, 165, 233, 0.9) 100%
+  );
+  background-size: 200% auto;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.submitButton:hover {
+  background-position: right center;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(59, 130, 246, 0.5);
+}
+
+.submitButton:active {
+  transform: translateY(0);
+}
+
+.submitButton:disabled {
+  @apply opacity-50 cursor-not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.socialContainer {
+  @apply flex justify-center gap-4 mt-8;
+}
+
+.contactSocialLink {
+  @apply flex items-center justify-center w-12 h-12 rounded-full;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contactSocialLink:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contactSocialLink:active {
+  transform: translateY(0);
+}
