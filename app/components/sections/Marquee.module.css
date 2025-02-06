@@ -33,7 +33,7 @@
   overflow: hidden;
 }
 .heroSection {
-  @apply relative min-h-screen flex flex-col justify-center items-center overflow-hidden;
+  @apply relative min-h-screen flex flex-col justify-start md:justify-center items-center overflow-hidden;
 }
 
 .textContainer {

@@ -36,7 +36,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className={`flex flex-col-reverse md:flex-row items-center justify-between gap-12 ${styles.textContainer}`}
+            className={`flex flex-col md:flex-row items-center mt-20 md:mt-0 gap-12 ${styles.textContainer}`}
           >
             <div className="flex-1 text-center md:text-left">
               <div className={styles.textBackground} />
@@ -50,7 +50,7 @@ export default function HeroSection() {
                 <span className={styles.wavingHand}>👋</span>
               </h1>
               <p
-                className={`${styles.heroText} text-lg text-gray-600 dark:text-gray-400 mb-8`}
+                className={`${styles.heroText} text-lg text-gray-600 dark:text-gray-400 mb-2 md:mb-8`}
               >
                 a.k.a. {PERSONAL_INFO.ALIAS} |{" "}
                 <span className={styles.gradientText}>
@@ -58,7 +58,7 @@ export default function HeroSection() {
                 </span>
               </p>
               <p
-                className={`${styles.heroText} text-xl sm:text-2xl text-gray-600 dark:text-gray-400 mb-8`}
+                className={`${styles.heroText} text-xl sm:text-2xl text-gray-600 dark:text-gray-400 mb-2 md:mb-8`}
               >
                 <span className={styles.gradientText}>
                   {PERSONAL_INFO.ROLE}
@@ -75,7 +75,7 @@ export default function HeroSection() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="mb-12"
+                className="mb-8 md:mb-12"
               >
                 <a
                   href={`#${SECTION_IDS.CONTACT}`}
@@ -87,7 +87,7 @@ export default function HeroSection() {
               </motion.div>
 
               {/* Social Links */}
-              <SocialLinks className={styles.socialLinks} />
+              <SocialLinks className={`${styles.socialLinks}`} />
             </div>
 
             {/* Portrait Image */}
@@ -95,7 +95,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5 }}
-              className="relative w-64 h-64 md:w-80 md:h-80"
+              className="relative w-36 h-36 sm:w-48 sm:h-48 md:w-80 md:h-80 mt-0 mb-12 md:mb-0"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-3xl rotate-6 transform-gpu opacity-85" />
               <div className="absolute inset-0 bg-white dark:bg-gray-900 rounded-3xl -rotate-6 transform-gpu" />
@@ -118,7 +118,7 @@ export default function HeroSection() {
       {/* Scroll Indicator */}
       {showScroll && (
         <motion.div
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:flex"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
