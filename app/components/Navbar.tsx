@@ -46,10 +46,7 @@ export default function Navbar() {
                 className="relative group text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
               >
                 {item.name}
-                <motion.div
-                  className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-cyan-500 group-hover:w-full transition-all duration-300"
-                  whileHover={{ width: "100%" }}
-                />
+                <div className="absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-blue-600 to-cyan-500 w-0 group-hover:w-full transition-all duration-300 ease-out" />
               </Link>
             ))}
           </div>

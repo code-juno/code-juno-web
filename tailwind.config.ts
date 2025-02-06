@@ -12,6 +12,8 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        primary: "#4F46E5",
+        secondary: "#06B6D4",
       },
       animation: {
         "marquee-left": "marquee-left 40s linear infinite",
