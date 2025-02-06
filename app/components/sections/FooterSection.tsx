@@ -35,7 +35,7 @@ export default function FooterSection() {
           {/* Copyright */}
           <div className="text-sm text-gray-500 dark:text-gray-400 text-center">
             <p>
-              © {currentYear} {PERSONAL_INFO.NAME}. All rights reserved.
+              © {currentYear} {PERSONAL_INFO.HANDLE}. All rights reserved.
             </p>
             <p className="mt-2 text-xs">
               Built with Next.js & Tailwind CSS •{" "}
