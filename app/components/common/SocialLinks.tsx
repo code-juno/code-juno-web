@@ -3,12 +3,12 @@
 import { FiGithub, FiLinkedin, FiInstagram, FiMail } from "react-icons/fi";
 import { SOCIAL_LINKS } from "@/app/constants";
 import type { SocialLink } from "@/app/types";
-
-type SocialLinksProps = {
+import styles from "./SocialLinks.module.css";
+interface SocialLinksProps {
   className?: string;
   linkClassName?: string;
   iconSize?: number;
-};
+}
 
 const socialLinks: SocialLink[] = [
   {
@@ -48,7 +48,7 @@ export default function SocialLinks({
           rel={
             link.href.startsWith("mailto:") ? undefined : "noopener noreferrer"
           }
-          className={linkClassName}
+          className={`${linkClassName} ${styles.socialLink}`}
           aria-label={link.label}
         >
           <link.icon size={iconSize} />

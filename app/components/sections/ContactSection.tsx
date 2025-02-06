@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import styles from "./ContactSection.module.css";
 import ContactForm from "../common/ContactForm";
-import SocialLinks from "../common/SocialLinks";
 import { SECTION_IDS } from "@/app/constants";
 import SectionHeader from "../SectionHeader";
 
@@ -11,7 +10,7 @@ export default function ContactSection() {
   return (
     <section id={SECTION_IDS.CONTACT} className={styles.contactSection}>
       <div className={styles.contactBackground} />
-      <div className="py-32 px-4 sm:px-6 lg:px-8">
+      <div className="py-48 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -27,14 +26,6 @@ export default function ContactSection() {
 
             <div className={styles.formContainer}>
               <ContactForm />
-
-              {/* Social Links */}
-              <div className={styles.socialContainer}>
-                <SocialLinks
-                  iconSize={24}
-                  linkClassName={styles.contactSocialLink}
-                />
-              </div>
             </div>
           </motion.div>
         </div>

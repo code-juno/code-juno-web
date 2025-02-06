@@ -5,6 +5,8 @@ import { FiGithub, FiExternalLink } from "react-icons/fi";
 import Image from "next/image";
 import { useState } from "react";
 import SectionHeader from "../SectionHeader";
+import styles from "./ProjectsSection.module.css";
+import { SECTION_IDS } from "@/app/constants";
 
 type Project = {
   title: string;
@@ -111,8 +113,8 @@ function ProjectCard({ project }: { project: Project }) {
 export default function ProjectsSection() {
   return (
     <section
-      id="projects"
-      className="py-32 px-4 sm:px-6 lg:px-8 bg-gray-100 dark:bg-gray-800"
+      id={SECTION_IDS.PROJECTS}
+      className={`${styles.projectsSection} py-32 px-4 sm:px-6 lg:px-8 bg-gray-100 dark:bg-gray-800`}
     >
       <div className="max-w-7xl mx-auto">
         <motion.div
@@ -123,7 +125,7 @@ export default function ProjectsSection() {
         >
           <SectionHeader
             title="Featured Projects"
-            subtitle="Here are some of the projects I've worked on"
+            subtitle="Here are some of my recent and ongoing projects that I'm excited about."
           />
         </motion.div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
