@@ -4,8 +4,8 @@ import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { FiMenu, FiX } from "react-icons/fi";
-import { SECTION_IDS } from "@/app/constants";
-import styles from "@/app/components/sections/shared.module.css";
+import { SECTION_IDS } from "@/constants";
+import styles from "@/components/sections/shared.module.css";
 
 const navItems = [
   { name: "Home", href: "/" },

@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import InfiniteMarquee from "../common/InfiniteMarquee";
-import { SKILLS, SECTION_IDS } from "@/app/constants";
+import { SKILLS, SECTION_IDS } from "@/constants";
 import SectionHeader from "../SectionHeader";
 
 export default function SkillsSection() {

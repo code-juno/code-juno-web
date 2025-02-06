@@ -6,7 +6,7 @@ import Image from "next/image";
 import { useState } from "react";
 import SectionHeader from "../SectionHeader";
 import styles from "./ProjectsSection.module.css";
-import { SECTION_IDS } from "@/app/constants";
+import { SECTION_IDS } from "@/constants";
 
 type Project = {
   title: string;

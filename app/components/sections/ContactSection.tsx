@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import styles from "./ContactSection.module.css";
 import ContactForm from "../common/ContactForm";
-import { SECTION_IDS } from "@/app/constants";
+import { SECTION_IDS } from "@/constants";
 import SectionHeader from "../SectionHeader";
 
 export default function ContactSection() {

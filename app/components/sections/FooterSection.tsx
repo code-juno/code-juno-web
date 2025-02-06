@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { FiGithub } from "react-icons/fi";
 import SocialLinks from "../common/SocialLinks";
-import { PERSONAL_INFO } from "@/app/constants";
+import { PERSONAL_INFO } from "@/constants";
 import styles from "./FooterSection.module.css";
 
 export default function FooterSection() {

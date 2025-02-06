@@ -8,7 +8,7 @@ import Image from "next/image";
 import styles from "./HeroSection.module.css";
 import sharedStyles from "./shared.module.css";
 import SocialLinks from "../common/SocialLinks";
-import { PERSONAL_INFO, SECTION_IDS } from "@/app/constants";
+import { PERSONAL_INFO, SECTION_IDS } from "@/constants";
 
 export default function HeroSection() {
   const [showScroll, setShowScroll] = useState(true);

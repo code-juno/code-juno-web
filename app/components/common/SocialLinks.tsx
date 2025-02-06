@@ -1,8 +1,8 @@
 "use client";
 
 import { FiGithub, FiLinkedin, FiInstagram, FiMail } from "react-icons/fi";
-import { SOCIAL_LINKS } from "@/app/constants";
-import type { SocialLink } from "@/app/types";
+import { SOCIAL_LINKS } from "@/constants";
+import type { SocialLink } from "@/types";
 import styles from "./SocialLinks.module.css";
 interface SocialLinksProps {
   className?: string;
