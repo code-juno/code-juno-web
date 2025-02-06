@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import styles from "./Marquee.module.css";
+import styles from "./shared.module.css";
 import ContactForm from "../common/ContactForm";
 import SocialLinks from "../common/SocialLinks";
 import { SECTION_IDS } from "@/app/constants";

@@ -2,7 +2,7 @@
 
 import SkillCard from "./SkillCard";
 import type { Skill } from "@/app/types";
-import styles from "../sections/Marquee.module.css";
+import styles from "../sections/shared.module.css";
 
 type InfiniteMarqueeProps = {
   items: Skill[];

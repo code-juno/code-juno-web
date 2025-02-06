@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { FiArrowRight } from "react-icons/fi";
 import { BsMouse } from "react-icons/bs";
 import Image from "next/image";
-import styles from "./Marquee.module.css";
+import styles from "./shared.module.css";
 import SocialLinks from "../common/SocialLinks";
 import { PERSONAL_INFO, SECTION_IDS } from "@/app/constants";
 
