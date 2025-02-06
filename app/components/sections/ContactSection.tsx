@@ -8,10 +8,10 @@ import SectionHeader from "../SectionHeader";
 
 export default function ContactSection() {
   return (
-    <section id={SECTION_IDS.CONTACT} className={styles.contactSection}>
+    <section className={styles.contactSection}>
       <div className={styles.contactBackground} />
-      <div className="py-48 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      <div className="py-24 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto py-24" id={SECTION_IDS.CONTACT}>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
