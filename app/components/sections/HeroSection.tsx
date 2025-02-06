@@ -6,6 +6,7 @@ import { FiArrowRight } from "react-icons/fi";
 import { BsMouse } from "react-icons/bs";
 import Image from "next/image";
 import styles from "./HeroSection.module.css";
+import sharedStyles from "./shared.module.css";
 import SocialLinks from "../common/SocialLinks";
 import { PERSONAL_INFO, SECTION_IDS } from "@/app/constants";
 
@@ -44,7 +45,7 @@ export default function HeroSection() {
                 className={`${styles.heroText} text-4xl sm:text-5xl md:text-6xl font-bold mb-2`}
               >
                 Hi, I&apos;m{" "}
-                <span className={styles.gradientText}>
+                <span className={sharedStyles.gradientText}>
                   {PERSONAL_INFO.NAME}
                 </span>{" "}
                 <span className={styles.wavingHand}>👋</span>
@@ -53,14 +54,14 @@ export default function HeroSection() {
                 className={`${styles.heroText} text-lg text-gray-600 dark:text-gray-400 mb-2 md:mb-8`}
               >
                 a.k.a. {PERSONAL_INFO.ALIAS} |{" "}
-                <span className={styles.gradientText}>
+                <span className={sharedStyles.gradientText}>
                   {PERSONAL_INFO.HANDLE}
                 </span>
               </p>
               <p
                 className={`${styles.heroText} text-xl sm:text-2xl text-gray-600 dark:text-gray-400 mb-2 md:mb-8`}
               >
-                <span className={styles.gradientText}>
+                <span className={sharedStyles.gradientText}>
                   {PERSONAL_INFO.ROLE}
                 </span>
               </p>
@@ -105,7 +106,7 @@ export default function HeroSection() {
               >
                 <a
                   href={`#${SECTION_IDS.CONTACT}`}
-                  className={`${styles.ctaButton} text-white group`}
+                  className={`${sharedStyles.ctaButton} text-white group`}
                 >
                   Let&apos;s Work Together
                   <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
@@ -113,7 +114,7 @@ export default function HeroSection() {
               </motion.div>
 
               {/* Social Links */}
-              <SocialLinks className={`${styles.socialLinks}`} />
+              <SocialLinks className={`${sharedStyles.socialLinks}`} />
             </div>
 
             {/* Portrait Image */}
