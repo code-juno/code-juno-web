@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import type { FormStatus, FormData } from "@/app/types";
+import type { FormStatus, FormData } from "@/types";
 
 type ContactFormProps = {
   className?: string;
