@@ -1,7 +1,7 @@
 "use client";
 
 import SkillCard from "./SkillCard";
-import type { Skill } from "@/app/types";
+import type { Skill } from "@/types";
 import styles from "./InfiniteMarquee.module.css";
 
 type InfiniteMarqueeProps = {

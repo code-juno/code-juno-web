@@ -4,7 +4,7 @@ import { IconType } from "react-icons";
 import * as Fa from "react-icons/fa";
 import * as Si from "react-icons/si";
 import * as Vsc from "react-icons/vsc";
-import type { Skill } from "@/app/types";
+import type { Skill } from "@/types";
 
 type SkillCardProps = {
   skill: Skill;
