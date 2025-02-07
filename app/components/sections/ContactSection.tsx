@@ -21,11 +21,15 @@ export default function ContactSection() {
           >
             <SectionHeader
               title="Get in Touch"
-              subtitle="Have a project in mind? I'd love to hear from you."
+              subtitle="Have a project in mind? I want to hear about it."
             />
 
             <div className={styles.formContainer}>
               <ContactForm />
+              <p className="text-sm text-gray-500 dark:text-gray-400 text-center mt-4">
+                Your information is private and will never be shared with third
+                parties.
+              </p>
             </div>
           </motion.div>
         </div>

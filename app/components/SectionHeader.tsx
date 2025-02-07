@@ -1,23 +1,17 @@
 import React from "react";
-import styles from "./SectionHeader.module.css";
 
 interface SectionHeaderProps {
   title: string;
-  subtitle?: string;
-  className?: string;
+  subtitle: string;
 }
 
-const SectionHeader: React.FC<SectionHeaderProps> = ({
-  title,
-  subtitle,
-  className = "",
-}) => {
+export default function SectionHeader({ title, subtitle }: SectionHeaderProps) {
   return (
-    <div className={`${styles.headerContainer} ${className}`}>
-      <h2 className={styles.title}>{title}</h2>
-      {subtitle && <p className={styles.subtitle}>{subtitle}</p>}
+    <div className="text-center mb-8">
+      <h2 className="text-4xl font-bold mb-4 text-white">{title}</h2>
+      <p className="text-lg text-gray-400 max-w-[700px] mx-auto leading-relaxed">
+        {subtitle}
+      </p>
     </div>
   );
-};
-
-export default SectionHeader;
+}
