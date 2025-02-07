@@ -137,8 +137,8 @@ export default function HeroSection() {
             </motion.div>
           </motion.div>
         </div>
+        <SocialLinks className={`${sharedStyles.socialLinks} z-50`} />
       </div>
-      <SocialLinks className={`${sharedStyles.socialLinks}`} />
 
       {/* Scroll Indicator */}
       {showScroll && (
