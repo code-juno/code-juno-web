@@ -9,6 +9,7 @@ import styles from "./HeroSection.module.css";
 import sharedStyles from "./shared.module.css";
 import SocialLinks from "../common/SocialLinks";
 import { PERSONAL_INFO, SECTION_IDS } from "@/constants";
+import Stars from "../common/Stars";
 
 export default function HeroSection() {
   const [showScroll, setShowScroll] = useState(true);
@@ -28,6 +29,9 @@ export default function HeroSection() {
 
   return (
     <section className={styles.heroSection}>
+      <Stars count={100} depth={0.5} className="z-0" />
+      <Stars count={50} depth={1} className="z-0" />
+      <Stars count={25} depth={1.5} className="z-0" />
       <div className={styles.sectionBackground} />
       <div className={styles.sectionOverlay} />
 

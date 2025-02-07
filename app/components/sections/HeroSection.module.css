@@ -1,5 +1,11 @@
 .heroSection {
   @apply relative min-h-screen flex flex-col justify-center items-center overflow-hidden;
+  perspective: 1000px;
+}
+
+.starsContainer {
+  @apply absolute inset-0 overflow-hidden;
+  z-index: 0;
 }
 
 .textContainer {

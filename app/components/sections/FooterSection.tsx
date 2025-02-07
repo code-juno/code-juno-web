@@ -5,13 +5,19 @@ import { FiGithub } from "react-icons/fi";
 import SocialLinks from "../common/SocialLinks";
 import { PERSONAL_INFO } from "@/constants";
 import styles from "./FooterSection.module.css";
+import Stars from "../common/Stars";
 
 export default function FooterSection() {
   const currentYear = new Date().getFullYear();
 
   return (
     <footer className={styles.footer}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className={styles.starsContainer}>
+        <Stars count={75} depth={0.3} fadeDirection="top" className="z-0" />
+      </div>
+      <div
+        className={`${styles.footerContent} max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12`}
+      >
         <div className="flex flex-col items-center gap-6">
           {/* Social Links */}
           <SocialLinks iconSize={20} />

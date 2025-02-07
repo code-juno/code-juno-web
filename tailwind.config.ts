@@ -19,6 +19,7 @@ const config: Config = {
         "marquee-left": "marquee-left 40s linear infinite",
         "marquee-right": "marquee-right 40s linear infinite",
         none: "none",
+        twinkle: "twinkle 2s ease-in-out infinite",
       },
       keyframes: {
         "marquee-left": {
@@ -28,6 +29,10 @@ const config: Config = {
         "marquee-right": {
           "0%": { transform: "translateX(-33.33333%)" },
           "100%": { transform: "translateX(0)" },
+        },
+        twinkle: {
+          "0%, 100%": { opacity: "var(--tw-opacity)" },
+          "50%": { opacity: "0" },
         },
       },
     },
