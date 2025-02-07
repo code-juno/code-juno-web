@@ -34,7 +34,7 @@ export default function Stars({
     const generateStars = () => {
       return Array.from({ length: count }, (_, i) => {
         const yPos = Math.random() * 100;
-        const baseOpacity = Math.random() * 0.7 + 0.3;
+        const baseOpacity = Math.random() * 0.5 + 0.2;
         let fadeMultiplier = 1;
 
         if (fadeDirection === "top") {
@@ -49,8 +49,8 @@ export default function Stars({
           y: yPos,
           size: (Math.random() * 2 + 1) * depth,
           opacity: baseOpacity * (1 / depth) * fadeMultiplier,
-          twinkle: Math.random() > 0.6,
-          delay: Math.random() * 2,
+          twinkle: Math.random() > 0.5,
+          delay: Math.random() * 3,
         };
       });
     };
@@ -63,7 +63,7 @@ export default function Stars({
       {stars.map((star) => (
         <div
           key={star.id}
-          className={`absolute rounded-full bg-white ${
+          className={`absolute rounded-full bg-white transition-opacity duration-[3000ms] ease-in-out opacity-20 ${
             star.twinkle ? "animate-twinkle" : ""
           }`}
           style={{
