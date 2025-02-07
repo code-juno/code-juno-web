@@ -21,13 +21,38 @@ interface StarsProps {
   fadeDirection?: "none" | "top" | "bottom";
 }
 
+function useStarCount(defaultCount: number) {
+  const [count, setCount] = useState(defaultCount);
+
+  useEffect(() => {
+    const updateCount = () => {
+      if (window.innerWidth < 640) {
+        // sm breakpoint
+        setCount(Math.floor(defaultCount * 0.4)); // 40% of default count
+      } else if (window.innerWidth < 768) {
+        // md breakpoint
+        setCount(Math.floor(defaultCount * 0.6)); // 60% of default count
+      } else {
+        setCount(defaultCount);
+      }
+    };
+
+    updateCount();
+    window.addEventListener("resize", updateCount);
+    return () => window.removeEventListener("resize", updateCount);
+  }, [defaultCount]);
+
+  return count;
+}
+
 export default function Stars({
-  count = 50,
+  count: defaultCount = 50,
   depth = 1,
   className = "",
   y,
   fadeDirection = "none",
 }: StarsProps) {
+  const count = useStarCount(defaultCount);
   const [stars, setStars] = useState<Star[]>([]);
 
   useEffect(() => {
@@ -49,7 +74,7 @@ export default function Stars({
           y: yPos,
           size: (Math.random() * 2 + 1) * depth,
           opacity: baseOpacity * (1 / depth) * fadeMultiplier,
-          twinkle: Math.random() > 0.5,
+          twinkle: Math.random() > 0.75,
           delay: Math.random() * 3,
         };
       });

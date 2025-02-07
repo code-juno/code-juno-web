@@ -19,7 +19,7 @@ const config: Config = {
         "marquee-left": "marquee-left 40s linear infinite",
         "marquee-right": "marquee-right 40s linear infinite",
         none: "none",
-        twinkle: "twinkle 2s ease-in-out infinite",
+        twinkle: "twinkle 4s ease-in-out infinite",
       },
       keyframes: {
         "marquee-left": {
