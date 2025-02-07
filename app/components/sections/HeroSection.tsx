@@ -37,7 +37,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className={`flex flex-col md:flex-row items-center mt-20 md:mt-0 gap-12 ${styles.textContainer}`}
+            className={`flex flex-col md:flex-row items-center justify-center mt-20 md:mt-0 gap-12 ${styles.textContainer}`}
           >
             <div className="flex-1 text-center md:text-left">
               <div className={styles.textBackground} />
@@ -72,27 +72,27 @@ export default function HeroSection() {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: 0.2 }}
-                  className="flex items-center gap-2"
+                  className="pl-5 relative"
                 >
-                  <span className="text-blue-500">▹</span>I craft beautiful and
-                  performant mobile and web applications.
+                  <span className="text-blue-500 absolute left-0 top-0">▹</span>
+                  I craft beautiful and performant mobile and web applications.
                 </motion.li>
                 <motion.li
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: 0.3 }}
-                  className="flex items-center gap-2"
+                  className="pl-5 relative"
                 >
-                  <span className="text-blue-500">▹</span>
+                  <span className="text-blue-500 absolute left-0 top-0">▹</span>
                   Consult on the latest technologies, SEO and AI trends.
                 </motion.li>
                 <motion.li
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: 0.4 }}
-                  className="flex items-center gap-2"
+                  className="pl-5 relative"
                 >
-                  <span className="text-blue-500">▹</span>
+                  <span className="text-blue-500 absolute left-0 top-0">▹</span>
                   Build tools tailored to help businesses grow.
                 </motion.li>
               </ul>
@@ -112,9 +112,6 @@ export default function HeroSection() {
                   <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
                 </a>
               </motion.div>
-
-              {/* Social Links */}
-              <SocialLinks className={`${sharedStyles.socialLinks}`} />
             </div>
 
             {/* Portrait Image */}
@@ -122,7 +119,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5 }}
-              className="relative w-36 h-36 sm:w-48 sm:h-48 md:w-80 md:h-80 mt-0 mb-12 md:mb-0"
+              className="relative w-36 h-36 sm:w-48 sm:h-48 md:w-80 md:h-80 mt-0 mb-12 md:mb-0 hidden md:block"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-3xl rotate-6 transform-gpu opacity-85" />
               <div className="absolute inset-0 bg-white dark:bg-gray-900 rounded-3xl -rotate-6 transform-gpu" />
@@ -133,7 +130,7 @@ export default function HeroSection() {
                   alt={PERSONAL_INFO.NAME}
                   fill
                   priority
-                  className="object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-300 filter brightness-105 contrast-105 saturate-95"
+                  className="object-cover grayscale-[40%] hover:grayscale-0 transition-all duration-300 filter brightness-105 contrast-105 saturate-95 hidden sm:block"
                   sizes="(max-width: 768px) 256px, 320px"
                 />
               </div>
@@ -141,6 +138,7 @@ export default function HeroSection() {
           </motion.div>
         </div>
       </div>
+      <SocialLinks className={`${sharedStyles.socialLinks}`} />
 
       {/* Scroll Indicator */}
       {showScroll && (
