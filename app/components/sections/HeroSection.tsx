@@ -58,9 +58,9 @@ export default function HeroSection() {
                 className={`${styles.heroText} text-lg text-gray-600 dark:text-gray-400 mb-2 md:mb-8`}
               >
                 a.k.a. {PERSONAL_INFO.ALIAS} |{" "}
-                <span className={sharedStyles.gradientText}>
-                  {PERSONAL_INFO.HANDLE}
-                </span>
+                {/* <span className={sharedStyles.gradientText}> */}
+                {PERSONAL_INFO.HANDLE}
+                {/* </span> */}
               </p>
               <p
                 className={`${styles.heroText} text-xl sm:text-2xl text-gray-600 dark:text-gray-400 mb-2 md:mb-8`}
