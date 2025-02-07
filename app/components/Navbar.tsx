@@ -4,6 +4,8 @@ import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { FiMenu, FiX } from "react-icons/fi";
+import { BsFillMoonStarsFill } from "react-icons/bs";
+
 import { SECTION_IDS } from "@/constants";
 import styles from "@/components/sections/shared.module.css";
 
@@ -42,7 +44,11 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-50">
         <div className="flex items-center justify-between h-16">
-          <Link href="/" className="font-mono text-xl relative group">
+          <Link
+            href="/"
+            className="font-mono text-xl relative group flex items-center"
+          >
+            <BsFillMoonStarsFill className="text-blue-600 dark:text-blue-400 mr-2" />
             <span className="text-blue-600 dark:text-blue-400">code</span>
             <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
               juno
@@ -99,6 +105,8 @@ export default function Navbar() {
           ))}
         </div>
       </motion.div>
+
+      <div className="h-16 bg-gradient-to-b to-transparent from-black/30 via-black/10 absolute top-16 left-0 right-0 z-50" />
     </motion.nav>
   );
 }

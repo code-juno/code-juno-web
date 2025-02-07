@@ -23,7 +23,7 @@ const projects: Project[] = [
   {
     title: "A suite of language learning apps",
     description:
-      "Currently in development, TagalogNow is a cross-platform, iOS and Android language learning app that allows users to learn Tagalog through lessons, flashcards and spaced repetition. Once released, further languages will be added to the suite.",
+      "Currently in development, TagalogNow is a cross-platform, iOS and Android language learning app that allows users to learn the language of the Philippines through lessons, flashcards and spaced repetition. Once released, further languages will be added to the suite.",
     technologies: ["Expo", "React Native", "AI"],
     androidUrl: "#",
     iosUrl: "#",
