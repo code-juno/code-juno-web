@@ -24,7 +24,7 @@ const projects: Project[] = [
     title: "A suite of language learning apps",
     description:
       "Currently in development, TagalogNow is a cross-platform, iOS and Android language learning app that allows users to learn the language of the Philippines through lessons, flashcards and spaced repetition. Once released, further languages will be added to the suite.",
-    technologies: ["Expo", "React Native", "AI"],
+    technologies: ["React Native", "AI"],
     androidUrl: "#",
     iosUrl: "#",
   },
@@ -59,11 +59,16 @@ function ProjectCard({ project }: { project: Project }) {
           {project.technologies.map((tech) => (
             <span
               key={tech}
-              className="px-4 py-1.5 text-sm bg-gray-100 dark:bg-gray-800 rounded-full font-medium transition-colors duration-200 hover:bg-gray-200 dark:hover:bg-gray-700"
+              className="px-4 py-1.5 text-sm bg-gray-100 dark:bg-gray-800 rounded-full font-medium transition-colors duration-200 hover:bg-gray-200 dark:hover:bg-gray-700 mb-2"
             >
               {tech}
             </span>
           ))}
+          {!project.liveUrl && (
+            <span className="px-4 py-1.5 text-sm bg-blue-100 dark:bg-blue-900/50 rounded-full font-medium transition-colors duration-200 text-blue-600 dark:text-blue-300 mb-2 hover:bg-blue-200 dark:hover:bg-blue-800/50 border border-blue-200 dark:border-blue-800">
+              Coming Soon
+            </span>
+          )}
         </div>
         <div className="flex items-center gap-6 flex-wrap">
           {project.githubUrl && (
@@ -74,28 +79,6 @@ function ProjectCard({ project }: { project: Project }) {
               whileTap={{ scale: 0.95 }}
             >
               <FiGithub size={22} />
-            </motion.a>
-          )}
-          {project.androidUrl && (
-            <motion.a
-              href={project.androidUrl}
-              className="h-12 w-auto"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={(e) => {
-                if (project.androidUrl === "#") {
-                  e.preventDefault();
-                  alert("Coming soon!");
-                }
-              }}
-            >
-              <Image
-                src="/GetItOnGooglePlay.png"
-                alt="Get it on Google Play"
-                width={250}
-                height={80}
-                className="h-full w-auto"
-              />
             </motion.a>
           )}
           {project.iosUrl && (
@@ -120,6 +103,28 @@ function ProjectCard({ project }: { project: Project }) {
               />
             </motion.a>
           )}
+          {project.androidUrl && (
+            <motion.a
+              href={project.androidUrl}
+              className="h-12 w-auto"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={(e) => {
+                if (project.androidUrl === "#") {
+                  e.preventDefault();
+                  alert("Coming soon!");
+                }
+              }}
+            >
+              <Image
+                src="/GetItOnGooglePlay.png"
+                alt="Get it on Google Play"
+                width={250}
+                height={80}
+                className="h-full w-auto"
+              />
+            </motion.a>
+          )}
           {project.liveUrl && (
             <motion.a
               href={project.liveUrl}
@@ -135,13 +140,6 @@ function ProjectCard({ project }: { project: Project }) {
             >
               <FiExternalLink size={22} />
             </motion.a>
-          )}
-          {!project.liveUrl && (
-            <span
-              className={`text-sm px-3 py-1 rounded-full "bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-300 border border-blue-200 dark:border-blue-800`}
-            >
-              Coming Soon
-            </span>
           )}
         </div>
       </div>
