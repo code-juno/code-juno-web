@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+// import { useState, useRef, useEffect } from "react";
+import { useRef } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 // import { FiMenu, FiX } from "react-icons/fi";
