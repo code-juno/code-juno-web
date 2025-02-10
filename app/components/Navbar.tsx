@@ -3,35 +3,35 @@
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { FiMenu, FiX } from "react-icons/fi";
+// import { FiMenu, FiX } from "react-icons/fi";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 
-import { SECTION_IDS } from "@/constants";
+// import { SECTION_IDS } from "@/constants";
 import styles from "@/components/sections/shared.module.css";
 
-const navItems = [
-  { name: "Home", href: "/" },
-  { name: "Projects", href: "#projects" },
-  { name: "Skills", href: `#${SECTION_IDS.SKILLS}` },
-  { name: "Contact", href: `#${SECTION_IDS.CONTACT}` },
-];
+// const navItems = [
+//   { name: "Home", href: "/" },
+//   { name: "Projects", href: "#projects" },
+//   { name: "Skills", href: `#${SECTION_IDS.SKILLS}` },
+//   { name: "Contact", href: `#${SECTION_IDS.CONTACT}` },
+// ];
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false);
   const navRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    function handleClickOutside(event: MouseEvent) {
-      if (navRef.current && !navRef.current.contains(event.target as Node)) {
-        setIsOpen(false);
-      }
-    }
+  // useEffect(() => {
+  //   function handleClickOutside(event: MouseEvent) {
+  //     if (navRef.current && !navRef.current.contains(event.target as Node)) {
+  //       setIsOpen(false);
+  //     }
+  //   }
 
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
+  //   document.addEventListener("mousedown", handleClickOutside);
+  //   return () => {
+  //     document.removeEventListener("mousedown", handleClickOutside);
+  //   };
+  // }, []);
 
   return (
     <motion.nav
@@ -59,7 +59,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
+          {/* <div className="hidden md:flex space-x-8">
             {navItems.map((item) => (
               <Link
                 key={item.name}
@@ -70,10 +70,10 @@ export default function Navbar() {
                 <div className="absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-blue-600 to-cyan-500 w-0 group-hover:w-full transition-all duration-300 ease-out" />
               </Link>
             ))}
-          </div>
+          </div> */}
 
           {/* Mobile Navigation Button */}
-          <div className="md:hidden">
+          {/* <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
@@ -81,12 +81,12 @@ export default function Navbar() {
             >
               {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
 
       {/* Mobile Navigation Menu */}
-      <motion.div
+      {/* <motion.div
         initial={{ opacity: 0, height: 0 }}
         animate={{ opacity: isOpen ? 1 : 0, height: isOpen ? "auto" : 0 }}
         transition={{ duration: 0.2 }}
@@ -104,7 +104,7 @@ export default function Navbar() {
             </Link>
           ))}
         </div>
-      </motion.div>
+      </motion.div> */}
 
       <div className="h-16 bg-gradient-to-b to-transparent from-black/30 via-black/10 absolute top-16 left-0 right-0 z-50" />
     </motion.nav>
