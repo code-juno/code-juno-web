@@ -2,7 +2,7 @@ export const SOCIAL_LINKS = {
   GITHUB: "https://github.com/code-juno",
   LINKEDIN: "https://linkedin.com/in/brian-alldred-3a5662194",
   INSTAGRAM: "https://www.instagram.com/junalldred/",
-  EMAIL: "bri_alldred@live.co.uk",
+  EMAIL: "junalldred@gmail.com",
 };
 
 export const PERSONAL_INFO = {
