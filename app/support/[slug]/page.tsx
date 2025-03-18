@@ -1,15 +1,14 @@
 import { notFound } from "next/navigation";
-import SupportForm from "@/components/common/SupportForm";
 import { getFormattedAppName } from "@/constants/apps";
+import SupportForm from "@/components/common/SupportForm";
 
-interface PageProps {
-  params: {
-    appName: string;
-  };
-}
-
-export default async function SupportPage({ params }: PageProps) {
-  const urlAppName = decodeURIComponent(params.appName).toLowerCase();
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const slug = (await params).slug;
+  const urlAppName = decodeURIComponent(slug).toLowerCase();
   const formattedAppName = getFormattedAppName(urlAppName);
 
   if (!formattedAppName) {
