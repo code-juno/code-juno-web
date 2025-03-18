@@ -23,6 +23,8 @@ export class GoogleSheetsService {
     name: string;
     email: string;
     message: string;
+    subject?: string;
+    appName?: string;
   }) {
     await this.doc.loadInfo();
     const sheet = this.doc.sheetsByIndex[0];
@@ -32,6 +34,9 @@ export class GoogleSheetsService {
       name: data.name,
       email: data.email,
       message: data.message,
+      subject: data.subject || "",
+      appName: data.appName || "",
+      type: data.appName ? "support" : "contact",
     });
   }
 }
